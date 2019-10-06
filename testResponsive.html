@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+$(document).ready(function() {
+  $('.nav-link-collapse').on('click', function() {
+    $('.nav-link-collapse').not(this).removeClass('nav-link-show');
+    $(this).toggleClass('nav-link-show');
+  });
+});
+
+</script>
+<style>
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 4.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background-color: #ccc;
+}
+
+.nav-link:hover {
+  transition: all 0.4s;
+}
+
+.nav-link-collapse:after {
+  float: right;
+  content: '\f067';
+  font-family: 'FontAwesome';
+}
+
+.nav-link-show:after {
+  float: right;
+  content: '\f068';
+  font-family: 'FontAwesome';
+}
+
+.nav-item ul.nav-second-level {
+  padding-left: 0;
+  color: #000 ;
+}
+
+
+.nav-item ul.nav-second-level > .nav-item {
+  padding-left: 20px;
+}
+
+@media (min-width: 992px) {
+  .sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: calc(100vh - 3.5rem);
+    margin-top: 3.5rem;
+    background: #343a40;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-expand-lg .sidenav {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    margin-left: 230px;
+  }
+
+  .footer {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+  }
+}
+
+.navbar-side .navbar-nav > li > a:hover {
+    background-color: #34495E !important;
+}
+
+
+.navbar-s1 {
+  background-color: #2C3E50;
+  margin-left: 0;
+  border-bottom: 2px solid #2C3E50;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  z-index: 1030;
+}
+
+.navbar-s1 .navbar-brand {
+  display: inline-block;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-s1 .navbar-brand:hover,
+.navbar-s1 .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-s1 .navbar-text {
+  color: #999999;
+}
+
+.navbar-s1 .navbar-nav > li > a {
+  color: #999999;
+}
+
+.navbar-s1 .navbar-nav > li > a:hover,
+.navbar-s1 .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-s1 .navbar-nav > .active > a,
+.navbar-s1 .navbar-nav > .active > a:hover,
+.navbar-s1 .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+
+.navbar-s1 .navbar-nav > .disabled > a,
+.navbar-s1 .navbar-nav > .disabled > a:hover,
+.navbar-s1 .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+
+.navbar-s1 .navbar-toggler {
+  border-color: #333333;
+}
+
+.navbar-s1 .navbar-toggler:hover,
+.navbar-s1 .navbar-toggler:focus {
+  background-color: #333333;
+}
+
+.navbar-s1 .navbar-toggler .icon-bar {
+  background-color: #ffffff;
+}
+
+.navbar-s1 .navbar-collapse,
+.navbar-s1 .navbar-form {
+  border-color: #101010;
+}
+
+.navbar-s1 .navbar-nav > .open > a,
+.navbar-s1 .navbar-nav > .open > a:hover,
+.navbar-s1 .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+
+.navbar-side .navbar-nav > li > a {
+    background-color: #34495E;
+    outline: medium none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-side .navbar-nav > li > a {
+    background-color: #34495E;
+    outline: medium none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-side .sidenav li, .navbar-side .sidenav li.card {
+    border-bottom: 1px solid #142638;
+    border-top: 1px solid #54677A;
+    border-left: 1px solid #54677A;
+    border-right: 1px solid #54677A;
+}
+
+
+
+.navbar-side ul.sidenav{
+    background-color: #2C3E50;
+    border-bottom: 1px solid #54677A;
+    font-size: 13px;
+    margin-bottom: 0;
+    border-left: 1px solid #54677A;
+}
+
+.navbar-side .navbar-nav .sublink {
+    color: #000;
+}
+.border-right-sm {
+border-right: solid 1px;
+}
+.search-padding {
+padding-top: 1rem;
+}
+
+
+.input-group-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .2rem .2rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark navbar-side navbar-s1">
+  <a class="navbar-brand" href="#">Sidebar Nav</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
+      <li class="nav-item active card">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item card">
+        <a class="nav-link" href="#">Item 1</a>
+      </li>
+      <li class="nav-item card">
+        <a
+          class="nav-link nav-link-collapse"
+          href="#"
+          id="hasSubItems"
+          data-toggle="collapse"
+          data-target="#collapseSubItems2"
+          aria-controls="collapseSubItems2"
+          aria-expanded="false"
+        >Item 2</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems2" data-parent="#navAccordion">
+          <li class="nav-item ">
+            <a class="nav-link sublink" href="#">
+              <span class="nav-link-text">Item 2.1</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sublink" href="#">
+              <span class="nav-link-text">Item 2.2</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item card">
+        <a class="nav-link" href="#">Item 3</a>
+      </li>
+      <li class="nav-item card">
+        <a
+          class="nav-link nav-link-collapse"
+          href="#"
+          id="hasSubItems"
+          data-toggle="collapse"
+          data-target="#collapseSubItems4"
+          aria-controls="collapseSubItems4"
+          aria-expanded="false"
+        >Item 4</a>
+        <ul class="nav-second-level collapse" id="collapseSubItems4" data-parent="#navAccordion">
+          <li class="nav-item ">
+            <a class="nav-link sublink" href="#">
+              <span class="nav-link-text">Item 4.1</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sublink" href="#">
+              <span class="nav-link-text">Item 4.2</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sublink" href="#">
+              <span class="nav-link-text">Item 4.2</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item card">
+        <a class="nav-link" href="#">Item 5</a>
+      </li>
+    </ul>
+    <form class="form-inline ml-auto mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<main class="content-wrapper">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm border-right-sm">
+  <div class="row">
+  <div class="col-sm-3 col-md-3">
+  <div class="row">
+        <label class="col-md">Item 1</label>
+</div>
+ <select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+			</select>
+  </div>
+  <div class="col-sm-6 col-md-6">
+  <div class="row">
+        <label class="col-md">Item 2</label>
+</div>
+  <!-- Declare an input group -->
+        <div class="input-group ">  
+    
+            <!-- Prepend the following content to the input box -->
+        <div class="input-group-prepend">  
+    
+                <!-- Define the text content of the group -->
+		<span class="input-group-text "> 
+			<select name="order" class="">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+			</select>
+		</span>  
+        </div>  
+    
+            <!-- Declare an input group -->
+            <input type="text" 
+                   class="form-control form-control-sm"
+                   placeholder="Your domain name here">  
+      
+        </div> 
+  </div>
+   <div class="col-sm-3 col-md-3">
+   <div class="row">
+        <label class="col-md">Item 3</label>
+</div>
+   <select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+			</select>
+	</div>
+   <div class="col-sm-3 col-md-3">
+   <div class="row">
+        <label class="col-md">Item 4</label>
+</div>
+   <!-- Declare an input group -->
+            <input type="text" 
+                   class="form-control form-control-sm"
+                   placeholder="Date..">  
+      
+  </div>
+   
+  <div class="col-sm-3 col-md-3">
+  <div class="row">
+        <label class="col-md">Item 5</label>
+</div>
+   <select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+			</select>
+
+  </div>
+  <div class="col-sm-3 col-md-3"> 
+  <div class="row">
+        <label class="col-md">Item 6</label>
+</div>
+			<select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+			</select>
+  </div>
+   <div class="col-sm-3 col-md-3">
+   <div class="row">
+        <label class="col-md">Item 7</label>
+</div>
+			<select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+			</select>
+		
+  </div>
+   <div class="col-sm-3 col-md-3">
+<div class="row">
+        <label class="col-md">Item 8</label>
+</div>		
+		<select name="order" class="form-control form-control-sm">
+				<option value="" disabled>Select Order</option>
+				<option value="a" selected>A</option>
+				<option value="b">B</option>
+			</select>
+		
+  </div>
+  <div class="col-sm-3 col-md-3 search-padding">
+ <div class="row ">
+        <label class="col-md"></label>
+</div>
+	<input class="btn btn-primary" type="button" value="Search">
+		
+  </div>
+  
+  
+  </div>  
+    
+  
+  </div>
+  <div class="col-sm">col-sm</div>
+</div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+      <div class="text-center">
+          <span>Coded by <a href="https://si-dev.com/ru">SI-Dev</a>, 2018</span>
+      </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
